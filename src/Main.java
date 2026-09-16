@@ -1,18 +1,34 @@
 import cadastro.Pessoa;
 import cadastro.Cliente;
+import cadastro.Professor;
+import cadastro.Aluno;
 void main() {
     Pessoa p1 = new Pessoa("gustavo", "123", "04-11-07");
-    Cliente p2 = new Cliente("marlom", "456", "10-11-09", 510);
+    Cliente c1 = new Cliente("marlom", "456", "10-11-09", 510);
+    Professor pf1 = new Professor("jedson", "331", "11-12-1603", "euSouInevitavel");
+    Aluno a1 = new Aluno("heitor", "67", "20-03-1200", "garoto de programa");
     System.out.println("--- p1 ---");
     p1.apresentar();
     System.out.println(p1.getCpf());
     System.out.println(p1.getDataNascimento());
 
 
-    System.out.println("--- p2 ---");
-    p2.apresentar();
-    System.out.println(p2.getCpf());
-    System.out.println(p2.getDataNascimento());
-    System.out.println(p2.getDinheiro());
+    System.out.println("--- c1 ---");
+    c1.apresentar();
+    System.out.println(c1.getCpf());
+    System.out.println(c1.getDataNascimento());
+    System.out.println(c1.getDinheiro());
+
+    System.out.println("--- pf1 ---");
+    pf1.apresentar();
+    System.out.println(pf1.getCpf());
+    System.out.println(pf1.getDataNascimento());
+    System.out.println(pf1.getCarteiraTrabalho());
+
+    System.out.println("--- a1 ---");
+    a1.apresentar();
+    System.out.println(a1.getCpf());
+    System.out.println(a1.getDataNascimento());
+    System.out.println(a1.getTipoDePobreza());
 
 }
