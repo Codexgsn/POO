@@ -1,12 +1,25 @@
 package empresa;
 
 public class Desenvolvedor extends Funcionario {
-    private double salarioAdicional = 7528.39;
+    private String senioridade;
 
-    public Desenvolvedor(String nome, int matricula, double salario, String cargo, double salarioadicional){
-        super(nome, matricula, salario, cargo);
-        this.salarioAdicional = salarioadicional;
-        cargo = "funcionario";
+    public Desenvolvedor(String nome, int matricula, String senioridade){
+        super(nome, matricula);
+        this.senioridade = senioridade;
+        this.salario += 7528.39;
+
+    }
+    @Override
+    public String getCargo(){
+        return "Desenvolvedor";
+    }
+
+    public String getSenioridade(){
+        return senioridade;
+    }
+
+    public void setSenioridade(String senioridade){
+        this.senioridade = senioridade;
     }
 
 }

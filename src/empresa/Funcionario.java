@@ -3,14 +3,14 @@ package empresa;
 public class Funcionario {
     private String nome;
     private int matricula;
-    protected double salario = 1621.00;
+    protected double salario;
     private String cargo;
 
-    public Funcionario(String nome, int matricula, double salario, String cargo) {
+    public Funcionario(String nome, int matricula) {
         this.nome = nome;
         this.matricula = matricula;
-        this.salario = salario;
-        this.cargo = cargo;
+        this.salario = 1621.00;
+        this.cargo = "Funcionário";
     }
 
     public String getNome() {

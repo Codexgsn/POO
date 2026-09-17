@@ -5,14 +5,15 @@ import cadastro.Professor;
 import cadastro.Aluno;
 import empresa.Funcionario;
 import empresa.Desenvolvedor;
+import empresa.Gerente;
 void main() {
     Scanner scan = new Scanner(System.in);
 
     System.out.print("Escolha entre os packages: \ncadastro--> 1 \nempresa--> 2 \nopção: ");
-    int opt = scan.nextInt();
-    System.out.println(opt);
+
 
     if(scan.hasNextInt()) {
+        int opt = scan.nextInt();
         switch (opt) {
 
             case 1:
@@ -45,7 +46,24 @@ void main() {
                 break;
 
             case 2:
+                Funcionario f1 = new Funcionario("Gustavo", 84551);
+                Desenvolvedor d1 = new Desenvolvedor("Pedro", 34578, "Pleno");
+                Gerente g1 = new Gerente("Heitor", 34584, "Médio");
 
+                System.out.println("--- F1 ---");
+                System.out.println(f1.getNome());
+                System.out.println(f1.getCargo());
+                System.out.println(f1.getSalario());
+                System.out.println("--- D1 ---");
+                System.out.println(d1.getNome());
+                System.out.println(d1.getCargo());
+                System.out.println(d1.getSenioridade());
+                System.out.println(d1.getSalario());
+                System.out.println("--- G1 ---");
+                System.out.println(g1.getNome());
+                System.out.println(g1.getCargo());
+                System.out.println(g1.getNivel());
+                System.out.println(g1.getSalario());
                 break;
 
             default:
