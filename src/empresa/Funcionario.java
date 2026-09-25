@@ -5,12 +5,18 @@ public class Funcionario {
     private int matricula;
     protected double salario;
     private String cargo;
+    private double bonus;
 
-    public Funcionario(String nome, int matricula) {
+    public Funcionario(String nome, int matricula, double bonus) {
         this.nome = nome;
         this.matricula = matricula;
         this.salario = 1621.00;
         this.cargo = "Funcionário";
+        this.bonus = bonus;
+    }
+
+    public double calcularBonus(){
+        return salario += salario * bonus;
     }
 
     public String getNome() {
@@ -43,6 +49,14 @@ public class Funcionario {
 
     public void cargo(String cargo){
         this.cargo = cargo;
+    }
+
+    public double getBonus(){
+        return bonus;
+    }
+
+    public void setBonus(double bonus){
+        this.bonus = bonus;
     }
 
 }

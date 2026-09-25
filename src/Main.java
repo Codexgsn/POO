@@ -46,31 +46,37 @@ void main() {
                 break;
 
             case 2:
-                Funcionario f1 = new Funcionario("Gustavo", 84551);
-                Desenvolvedor d1 = new Desenvolvedor("Pedro", 34578, "Pleno");
-                Gerente g1 = new Gerente("Heitor", 34584, "Médio");
+                Funcionario f1 = new Funcionario("Gustavo", 84551, 0.025);
+                Desenvolvedor d1 = new Desenvolvedor("Pedro", 34578, "Pleno", 0.07);
+                Gerente g1 = new Gerente("Heitor", 34584, "Médio", 0.1);
 
                 System.out.println("--- F1 ---");
                 System.out.println(f1.getNome());
                 System.out.println(f1.getCargo());
                 System.out.println(f1.getSalario());
+                System.out.println(f1.calcularBonus());
+
                 System.out.println("--- D1 ---");
                 System.out.println(d1.getNome());
                 System.out.println(d1.getCargo());
                 System.out.println(d1.getSenioridade());
                 System.out.println(d1.getSalario());
+                System.out.println(d1.calcularBonus());
+
                 System.out.println("--- G1 ---");
                 System.out.println(g1.getNome());
                 System.out.println(g1.getCargo());
                 System.out.println(g1.getNivel());
                 System.out.println(g1.getSalario());
+                System.out.println(g1.calcularBonus());
                 break;
 
             default:
                 System.out.println("Opção inválida");
         }
-    }
-    /*
 
-    */
+    } else {
+        System.out.println("Opção inválida, por favor tente novamente");
+    }
+
 }
